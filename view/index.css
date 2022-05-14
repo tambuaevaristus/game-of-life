@@ -5,10 +5,52 @@
     height: 700px;
 }
 
+body{
+    background-color: antiquewhite;
+}
+
 #bottons_container{
     height: 10vh;
     width: 70%;
     margin: 0 auto;
     padding-top: 10px;
-    background-color: red;
+    /* background-color: red; */
 }
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .cell{
+    background-color: lightgrey;
+    width: 10px;
+    border: 1px solid black;
+    height: 8px;
+    padding: 5px;
+    /* margin: 20px; */
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    /* width: 100%; */
+  }
+  
+  td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    width: 15px;
+    height: 15px;
+  }
+  
+ 
