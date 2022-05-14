@@ -1,6 +1,6 @@
 let table = document.getElementById("table");
 
-let cell = document.createTextNode("cell");
+let cell = document.createTextNode("");
 
 
 let board = Array.from(Array(50), () => new Array(50));
