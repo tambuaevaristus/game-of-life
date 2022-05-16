@@ -1,58 +1,75 @@
 let table = document.getElementById("table");
-  
-  // Create one dimensional array
-  var board = new Array(10);
-  
-  document.write("Creating 2D array <br>");
-    
-  // Loop to create 2D array using 1D array
+// document.getElementById("random_btn").onclick = random();
+
+// Create one dimensional array
+let board = new Array(50);
+
+// Loop to create 2D array using 1D array
+for (var i = 0; i < board.length; i++) {
+  board[i] = new Array(50);
+}
+
+// Loop to initialize 2D array elements.
+
+// function random(){
   for (var i = 0; i < board.length; i++) {
-      board[i] = new Array(10);
-  }
-    
-  var h = 0;
-    
-  // Loop to initialize 2D array elements.
-  for (var i = 0; i < board.length; i++) {
-      for (var j = 0; j < board.length; j++) {
-          board[i][j] = 2;
-      }
+    for (var j = 0; j < board.length; j++) {
+      board[i][j] = Math.floor(Math.random() * 2);
+    }
   }
 
-  board[3][4]=5;
+  console.log("random");
+  // PrintBoard();
+// }
 
-//   board[2][1]=0;
 
-    
-  // Loop to display the elements of 2D array. 
+let state = Math.floor(Math.random() * 2);
+
+
+function PrintBoard() {
+  var id = 0;
   for (var i = 0; i < board.length; i++) {
     let row = document.createElement("tr");
     table.appendChild(row);
-      for (var j = 0; j < board.length; j++)    {
-        //   document.write(board[i][j]);
-        board[i][j] = document.createTextNode(board[i][j]);
-        tdata = document.createElement("td");
-        tdata.appendChild(board[i][j]);
-        row.appendChild(tdata);
+    for (var j = 0; j < board.length; j++) {
+      // id += id;
+      //   document.write(board[i][j]);
+      let state = board[i][j];
+      board[i][j] = document.createTextNode(board[i][j]);
+      tdata = document.createElement("td");
+      tdata.setAttribute("id", id++);
+      tdata.setAttribute("data-state", state);
+      tdata.addEventListener('click',cellClick);            
+
+      row.appendChild(tdata);
+      if (table.children[i].children[j].getAttribute("data-state") == "1") {
+        table.children[i].children[j].style.backgroundColor = "yellow";
+      } else {
+        table.children[i].children[j].style.backgroundColor = "green";
       }
-  } 
+    }
+  }
+}
+
+// table.children[7].children[5].style.backgroundColor = "red";
+
+function cellClick() {
+  
+  
+  if (table.children[i].children[j]== '1'){
+    // table.children[i].children[j].getAttribute("data-state") = "0";
+    console.log("true")
+  }
+  // else{
+  //   table.children[i].children[j].getAttribute("data-state") = "1";
+
+  // }
 
 
 
+}
 
-                 
-//   for(let i=0; i<rows; i++){
-//     board[i] = [];
-//     // let row = document.createElement("tr");
-//     // table.appendChild(row);
-//     for(let j=0; j<cols; j++){   
-//         board[i][j] = document.createTextNode("c");
-//          tdata = document.createElement("td");
-//          tdata.appendChild(board[i][j]);
-//          row.appendChild(tdata);
-        
-//     }
 
-    
-   
-// }
+PrintBoard();
+
+
