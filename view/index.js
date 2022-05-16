@@ -23,7 +23,7 @@
 // ``
 //create array of iDs from 1 to numOfCells//___________________________________________________________________________________________
 let id = 1;
-let whileTrack = 1
+let whileTrack = 0
 let cellIds = []
 let numOfRows = 50;
 let numOfRowsCurr = numOfRows + 2;
@@ -85,6 +85,7 @@ start.addEventListener('click', function onClick(event) {
     // console.log("line 80 cell next state", cellNextStates)
     let num = 1;
     let counter = 1
+    whileTrack = 0
    
     function automateClick(){setTimeout(function(){
         let cellCurrStates = []
@@ -95,8 +96,8 @@ start.addEventListener('click', function onClick(event) {
 
 // instantiate tracking arrays to track current and next states
     for(let i = 0; i < numOfCellsCurr; i++){
-        cellCurrStates[trackCurrState] = 0
-        cellNextStates[trackCurrState] = 0
+        cellCurrStates.push(0)
+        cellNextStates.push(0)
     }
 
 
@@ -166,6 +167,9 @@ for(let i = 1; i <= numOfCells;i++){
     // cellCurrStates = [...cellNextStates]
     console.log("line 156 cell curr state", cellCurrStates)
     console.log("line 156 cell next state", cellNextStates)
+    if(whileTrack == 1){
+        return 0
+    }
     automateClick()
     }, 500)}
     automateClick()
@@ -218,4 +222,27 @@ for(let i = 1; i <= numOfCells;i++){
     }
 }
     //console.log(cellCurrStates)
+    whileTrack = 1
+});
+const stopB = document.getElementById("stop_btn");
+
+stopB.addEventListener('click', function onClick(event) {
+// let cellCurrStates = []
+// let cellNextStates = []
+// for(let i = 1; i <= numOfCells;i++){
+//     let trackCurrState = i + numOfRowsCurr + (Math.floor((i - 1)/numOfRows))*(2)
+//     cellNextStates[trackCurrState] = 0
+// }
+//using Next state to change collor(applying state)
+// for(let i = 1; i <= numOfCells;i++){
+//     let trackCurrState = i + numOfRowsCurr + (Math.floor((i - 1)/numOfRows))*(2)
+//     let temp = document.getElementById(i)
+//     if(cellNextStates[trackCurrState] == 1){
+//         temp.style.backgroundColor = "yellow"
+//     }else{
+//         temp.style.backgroundColor = "green"
+//     }
+// }
+    //console.log(cellCurrStates)
+    whileTrack = 1
 });
