@@ -35,32 +35,54 @@ body{
     background-color: lightgrey;
     width: 10px;
     border: 1px solid black;
-    height: 8px;
-    padding: 5px;
-    /* margin: 20px; */
+    /* height: 8px;
+    padding: 5px; */
+    margin: 20px;
   }
 
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
-    /* margin: 0 auto; */
+    /* width: 100%; */
+    margin: 0 auto;
   }
   
   td {
     border: 1px solid black;
     text-align: left;
-    padding: 3px;
-    width: 3px;
-    height: 3px;
+    /* padding: 10px; */
+    /* width: 5px;
+    height: 5px; */
     background-color: white;
   }
-  .container {
+  .container  {
       margin: 0 auto;
-      width: 43%;
+      /* width: 43%; */
   }
 
   /* table tr td#\37 34{
      background-color: #4CAF50;
   } */
 
+
+
+
+#world {
+    padding-bottom: 10px;
+}
+table {
+    background-color: whitesmoke;
+    margin-top: 60px;
+}
+td {
+    border: 1px solid darkgray;
+    width: 5px;
+    height: 5px;
+}
+
+td.dead {
+  background-color: green;
+}
+td.alive {
+  background-color:yellow;
+}

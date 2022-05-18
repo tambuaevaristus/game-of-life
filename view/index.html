@@ -10,20 +10,23 @@
   <body>
     <!-- <h2>Game of Life</h2> -->
     <div class="container">
-      <!-- <div id="cell_container" class="cell_container"> -->
-        <table id="table">
-           
-           
-          </table>
-      <!-- </div> -->
-       <div class="bottons_container" id="bottons_container">
+      <div id="world">
+       
+
+      
+      </div>
+     <center>
+      <div class="container" id="buttons">
         <div class="row">
-          <button class="btn" id="start_btn">Start</button>
-          <button class="btn" id="stop_btn">Stop</button>
-          <button class="btn" id="reset_btn">Reset</button>
-          <button class="btn" id="random_btn" onclick="random()">Random</button>
+          <button class="btn" id="start" onclick="start()">Start</button>
+          <button class="btn" id="stop_btn" onclick="stop()">Stop</button>
+          <button class="btn" id="reset_btn" onclick="(reset())">Reset</button>
+          <button class="btn" id="random_btn" onclick="(random())">Random</button>
         </div>
       </div> 
+    
+     </center>
+     
     </div>
   </body>
 
